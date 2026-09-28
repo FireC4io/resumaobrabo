@@ -1,6 +1,6 @@
 # 🔐 Resumão de Segurança da Informação
 
-Resumo interativo e didático do conteúdo do semestre, com um **simulado de 30 questões**.
+Resumo interativo e didático do conteúdo do semestre, com um **simulado de 50 questões** (modos Completo, Rápido com 30 sorteadas e Pegadinhas) e os vídeos indicados nos slides.
 
 **Acesse:** https://firec4io.github.io/resumaobrabo/
 
@@ -14,7 +14,7 @@ Resumo interativo e didático do conteúdo do semestre, com um **simulado de 30 
 7. Crimes virtuais e golpes no WhatsApp
 8. Fake News e Deepfake
 9. Bullying e Cyberbullying
-10. 📝 Simulado com 30 questões (feedback imediato e nota por assunto)
+10. 📝 Simulado com 50 questões, incluindo comparações e casos práticos (feedback imediato e nota por assunto)
 
 ## Rodar localmente
 É um site estático (HTML/CSS/JS puro, sem build). Basta abrir o `index.html` no navegador ou:

@@ -303,3 +303,29 @@ footer { margin-top: 48px; padding: 24px 0 40px; border-top: 1px solid var(--bor
   .topic-score { grid-template-columns: 1fr 50px; }
   .topic-score .bar { grid-column: 1 / -1; grid-row: 2; }
 }
+
+/* ===== Vídeos ===== */
+.videos { margin-top: 22px; }
+.video-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.video {
+  display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 12px 14px; box-shadow: var(--shadow); font-weight: 600; font-size: .93rem;
+}
+.video:hover { border-color: var(--bad); }
+.video .play {
+  flex: 0 0 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--bad); color: #fff; font-size: .8rem;
+}
+
+/* ===== Modos do simulado ===== */
+.mode-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.mode-card {
+  display: flex; flex-direction: column; gap: 2px; text-align: left;
+  border: 2px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 12px; padding: 14px;
+}
+.mode-card:hover { border-color: var(--accent); background: var(--accent-soft); }
+.mode-card strong { font-size: 1.05rem; }
+.mode-card span { color: var(--muted); font-size: .9rem; }
+.pill.kind { background: var(--warn-soft); color: var(--warn); }
