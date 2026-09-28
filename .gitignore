@@ -1,0 +1,4 @@
+# Materiais originais do professor (não publicar)
+*.pdf
+# Config local
+.claude/

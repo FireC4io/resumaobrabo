@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumão de Segurança da Informação</title>
+  <meta name="description" content="Resumo didático e simulado de 30 questões sobre Segurança da Informação: ativos, ameaças, 6 pilares, malware, phishing, crimes virtuais, fake news, deepfake e cyberbullying.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-row">
+      <div class="brand"><span class="brand-logo">🔐</span> Resumão SI</div>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Alternar tema claro/escuro">🌓 Tema</button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Módulos">
+      <a href="#fundamentos">1. Fundamentos</a>
+      <a href="#hackers">2. Hackers</a>
+      <a href="#pilares">3. 6 Pilares</a>
+      <a href="#mecanismos">4. Mecanismos</a>
+      <a href="#malware">5. Malware</a>
+      <a href="#phishing">6. Phishing</a>
+      <a href="#crimes">7. Crimes virtuais</a>
+      <a href="#fakenews">8. Fake News & Deepfake</a>
+      <a href="#cyberbullying">9. Cyberbullying</a>
+      <a href="#simulado" class="quiz-link">📝 Simulado</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1>Segurança da Informação: resumão</h1>
+    <p class="lead">Todo o conteúdo do semestre em um só lugar: ativos e ameaças, os 6 pilares, mecanismos de proteção, ameaças virtuais e crimes na internet. No final tem um <a href="#simulado">simulado com 30 questões</a>.</p>
+    <div class="progress-summary">
+      <span id="progressText">0 de 9 módulos estudados</span>
+      <div class="bar"><span id="progressBar"></span></div>
+    </div>
+    <div class="module-grid" id="moduleGrid">
+      <a class="module-card" href="#fundamentos" data-module="fundamentos"><span class="num">MÓDULO 1</span><h3>Fundamentos</h3><p>Ativos, risco, ameaça, vulnerabilidade e oportunidade.</p></a>
+      <a class="module-card" href="#hackers" data-module="hackers"><span class="num">MÓDULO 2</span><h3>Tipos de hackers</h3><p>Black, White, Gray e Dark Hat.</p></a>
+      <a class="module-card" href="#pilares" data-module="pilares"><span class="num">MÓDULO 3</span><h3>Os 6 pilares</h3><p>Confidencialidade, integridade, disponibilidade e mais.</p></a>
+      <a class="module-card" href="#mecanismos" data-module="mecanismos"><span class="num">MÓDULO 4</span><h3>Mecanismos de segurança</h3><p>Firewall, criptografia, VPN, IDS, DMZ, backup…</p></a>
+      <a class="module-card" href="#malware" data-module="malware"><span class="num">MÓDULO 5</span><h3>Malware</h3><p>Vírus, worm, trojan, spyware, adware, botnet, ransomware.</p></a>
+      <a class="module-card" href="#phishing" data-module="phishing"><span class="num">MÓDULO 6</span><h3>Phishing</h3><p>Smishing, vishing, pharming e engenharia social.</p></a>
+      <a class="module-card" href="#crimes" data-module="crimes"><span class="num">MÓDULO 7</span><h3>Crimes virtuais</h3><p>Furto de dados, golpes, crimes contra a honra.</p></a>
+      <a class="module-card" href="#fakenews" data-module="fakenews"><span class="num">MÓDULO 8</span><h3>Fake News & Deepfake</h3><p>Como reconhecer, enquadramento legal, IA.</p></a>
+      <a class="module-card" href="#cyberbullying" data-module="cyberbullying"><span class="num">MÓDULO 9</span><h3>Cyberbullying</h3><p>Conceito, formas e por que é tão grave.</p></a>
+    </div>
+  </section>
+
+  <!-- ================= 1. FUNDAMENTOS ================= -->
+  <section class="topic" id="fundamentos">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 1</span><h2>Fundamentos: ativos, riscos e ameaças</h2></div>
+      <button class="done-btn" data-done="fundamentos" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p><strong>Segurança da Informação</strong> é a proteção de dados contra <strong>acessos não autorizados, falhas e vazamentos</strong>. Para entender como proteger, primeiro precisamos saber <em>o que</em> proteger e <em>do que</em>.</p>
+
+    <h3>Como as peças se encaixam</h3>
+    <div class="flow" aria-label="Diagrama: ameaça explora vulnerabilidade e atinge o ativo, gerando risco">
+      <div class="node threat"><b>⚠️ Ameaça</b><small>o que pode causar dano</small></div>
+      <div class="arrow">explora →</div>
+      <div class="node vuln"><b>🕳️ Vulnerabilidade</b><small>a brecha, o ponto fraco</small></div>
+      <div class="arrow">atinge →</div>
+      <div class="node asset"><b>💎 Ativo</b><small>o que tem valor</small></div>
+      <div class="arrow">=</div>
+      <div class="node risk"><b>🎲 Risco</b><small>a incerteza do resultado</small></div>
+    </div>
+    <p class="formula">Risco = Evento + Probabilidade + Impacto</p>
+
+    <div class="grid-2" style="margin-top:14px">
+      <div class="card">
+        <h3>💎 Ativos</h3>
+        <p>Bens <strong>tangíveis e intangíveis</strong> que têm valor para uma empresa.</p>
+        <ul>
+          <li><strong>Tangíveis</strong> (dá pra tocar): computadores, servidores, documentos.</li>
+          <li><strong>Intangíveis</strong>: dados, softwares, propriedade intelectual.</li>
+        </ul>
+        <p>Proteger ativos evita <strong>perdas financeiras, vazamento de informações e violações de conformidade</strong>.</p>
+        <p class="muted">Medidas: backups, criptografia, controle de acesso, contratos etc.</p>
+      </div>
+      <div class="card">
+        <h3>🎲 Risco</h3>
+        <p>A <strong>incerteza sobre um evento futuro</strong> que pode impactar um objetivo <strong>negativa OU positivamente</strong>.</p>
+        <ul>
+          <li><strong>Evento:</strong> algo que pode acontecer.</li>
+          <li><strong>Probabilidade:</strong> chance de ocorrer.</li>
+          <li><strong>Impacto:</strong> consequências se ocorrer.</li>
+        </ul>
+        <p class="muted">Ex.: atraso na entrega de um software por falta de recursos; flutuações do mercado afetando investimentos.</p>
+      </div>
+      <div class="card">
+        <h3>⚠️ Ameaça</h3>
+        <p>Qualquer fator que pode causar <strong>danos ou prejuízos</strong> a um sistema, organização ou projeto. Ligada a <strong>riscos negativos</strong>; pode ser interna ou externa. Compromete a <strong>integridade, confidencialidade ou disponibilidade</strong>.</p>
+        <ul>
+          <li><strong>Humanas</strong> (intencionais ou não): ataques cibernéticos (phishing, ransomware, espionagem) e funcionários desatentos (senhas fracas, compartilhamento indevido).</li>
+          <li><strong>Não humanas:</strong> falha de hardware/software, desastres naturais, quedas de energia.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🕳️ Vulnerabilidade</h3>
+        <p><strong>Brechas exploradas por ameaças</strong> para comprometer um sistema.</p>
+        <ul>
+          <li><strong>Técnicas:</strong> software desatualizado, falhas de configuração.</li>
+          <li><strong>Organizacionais:</strong> falta de treinamento, permissões excessivas.</li>
+          <li><strong>Físicas:</strong> falta de controle de acesso, dispositivos desprotegidos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout ok">
+      <strong>🌱 Oportunidade = o “risco do bem”</strong>
+      Situação favorável que pode gerar benefícios; também envolve risco, mas com impacto <strong>positivo</strong>. Ex.: adotar novas tecnologias para melhorar a produtividade; expandir para um mercado com demanda crescente.
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tipo de risco</th><th>Nome</th><th>O que fazer</th></tr></thead>
+        <tbody>
+          <tr><td>Negativo</td><td>Ameaça</td><td>Mitigar, eliminar ou aceitar</td></tr>
+          <tr><td>Positivo</td><td>Oportunidade</td><td>Aproveitar para maximizar benefícios</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= 2. HACKERS ================= -->
+  <section class="topic" id="hackers">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 2</span><h2>Tipos de hackers (os “chapéus”)</h2></div>
+      <button class="done-btn" data-done="hackers" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p>A cor do chapéu indica a <strong>motivação</strong> e se existe <strong>permissão</strong> para invadir.</p>
+    <div class="grid-2">
+      <div class="hat black">
+        <div class="hat-icon">🎩</div>
+        <h3>Black Hat</h3>
+        <div class="hat-meta">Sem permissão · Ganho próprio</div>
+        <p>Exploram vulnerabilidades para <strong>benefício próprio</strong>: roubo de dados, invasão de sistemas, distribuição de malware.</p>
+      </div>
+      <div class="hat white">
+        <div class="hat-icon">🤍</div>
+        <h3>White Hat</h3>
+        <div class="hat-meta">Com permissão · Hacker ético</div>
+        <p>Invadem sistemas <strong>com autorização</strong> da organização para achar pontos fracos e <strong>corrigi-los</strong>, fortalecendo a segurança.</p>
+      </div>
+      <div class="hat gray">
+        <div class="hat-icon">🩶</div>
+        <h3>Gray Hat</h3>
+        <div class="hat-meta">Sem permissão · Sem intenção criminosa</div>
+        <p>Invadem <strong>sem consentimento</strong>, mas quando acham falhas <strong>denunciam</strong> em vez de explorar. Porém, <strong>podem cobrar</strong> para revelar todos os detalhes.</p>
+      </div>
+      <div class="hat dark">
+        <div class="hat-icon">🟣</div>
+        <h3>Dark Hat</h3>
+        <div class="hat-meta">Transita entre ético e antiético</div>
+        <p>Ficam entre as práticas éticas e antiéticas. Ex.: descobre uma vulnerabilidade e <strong>a explora antes de relatar</strong>.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>💡 Macete</strong>
+      Gray <em>denuncia</em> (mas pode cobrar) · Dark <em>explora primeiro, relata depois</em> · White tem <em>permissão</em> · Black quer <em>lucro</em>.
+    </div>
+  </section>
+
+  <!-- ================= 3. PILARES ================= -->
+  <section class="topic" id="pilares">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 3</span><h2>Os 6 pilares da Segurança da Informação</h2></div>
+      <button class="done-btn" data-done="pilares" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p>A base de toda estratégia de segurança. Os três clássicos são a <strong>tríade CID</strong> (Confidencialidade, Integridade, Disponibilidade); os outros três completam o modelo. <strong>Clique em cada pilar:</strong></p>
+
+    <div class="pillar-picker" role="tablist" id="pillarPicker"></div>
+    <div class="card pillar-detail" id="pillarDetail" role="tabpanel" aria-live="polite"></div>
+
+    <h3 style="margin-top:28px">🎮 Treino rápido: qual pilar está em jogo?</h3>
+    <div class="card" id="pillarGame"></div>
+  </section>
+
+  <!-- ================= 4. MECANISMOS ================= -->
+  <section class="topic" id="mecanismos">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 4</span><h2>Mecanismos de segurança</h2></div>
+      <button class="done-btn" data-done="mecanismos" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p>Ferramentas e práticas usadas para garantir os pilares. Atenção: <strong>nem todos dependem só de tecnologia</strong> (política de segurança, notificação de incidentes e conscientização também contam).</p>
+
+    <h3>🌐 Segurança de rede</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Mecanismo</th><th>O que faz</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Firewall</strong></td><td>Controla o tráfego da rede (o que entra e sai) e evita acessos não autorizados.</td></tr>
+          <tr><td><strong>Listas de Acesso (ACL)</strong></td><td>Regras que dizem quem/qual endereço pode ou não acessar determinado recurso da rede.</td></tr>
+          <tr><td><strong>DMZ</strong></td><td>“Zona desmilitarizada”: área da rede que isola os servidores expostos à internet (site, e-mail) da rede interna.</td></tr>
+          <tr><td><strong>Criptografia</strong></td><td>Embaralha os dados para que só quem tem a chave consiga ler. Protege dados <strong>em trânsito e armazenados</strong>.</td></tr>
+          <tr><td><strong>Hash</strong></td><td>“Impressão digital” de um dado. Se o dado mudar, o hash muda → valida a <strong>integridade</strong>.</td></tr>
+          <tr><td><strong>IDS</strong></td><td>Sistema de Detecção de Intrusões: monitora a rede e <strong>alerta</strong> sobre atividades suspeitas.</td></tr>
+          <tr><td><strong>VPN</strong></td><td>Rede Privada Virtual: cria um “túnel” <strong>criptografado e privado</strong> pela internet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:22px">🛡️ Mecanismos gerais</h3>
+    <div class="grid-3">
+      <div class="card"><h3>🔑 Criptografia</h3><p>Protege dados sensíveis em trânsito e armazenamento.</p></div>
+      <div class="card"><h3>🧱 Firewalls</h3><p>Controlam o tráfego de rede e evitam acessos não autorizados.</p></div>
+      <div class="card"><h3>📲 Autenticação Multifator (MFA)</h3><p>Camadas extras além da senha (ex.: código por SMS, app, biometria).</p></div>
+      <div class="card"><h3>👤 Gestão de acessos</h3><p><strong>Privilégio mínimo</strong>: cada usuário só acessa o que precisa para trabalhar.</p></div>
+      <div class="card"><h3>👁️ Monitoramento</h3><p>Ferramentas que analisam atividades suspeitas.</p></div>
+      <div class="card"><h3>💾 Backup e recuperação</h3><p>Estratégias para evitar perda de informações.</p></div>
+      <div class="card"><h3>🔒 VPNs e redes seguras</h3><p>Garantem conexões criptografadas e privadas.</p></div>
+      <div class="card"><h3>📜 Política de segurança</h3><p>Regras bem definidas sobre o uso da informação na organização.</p></div>
+      <div class="card"><h3>📝 Certificação e assinatura digital</h3><p>Comprovam identidade e autoria (autenticidade e não repúdio).</p></div>
+    </div>
+    <p style="margin-top:14px"><strong>Outros citados nos slides:</strong>
+      <span class="pill">Notificação de incidentes e abusos</span><span class="pill">Contas e senhas</span><span class="pill">Registro de eventos (logs)</span><span class="pill">Ferramentas antimalware</span><span class="pill">Filtro antispam</span><span class="pill">Controle de acesso</span>
+    </p>
+    <div class="callout">
+      <strong>Conclusão do professor</strong>
+      Segurança deve ser prioridade <strong>na empresa e na vida pessoal</strong>; investir em <strong>conscientização</strong> reduz riscos significativamente; implementar boas práticas <strong>baseadas nos 6 pilares</strong>.
+    </div>
+  </section>
+
+  <!-- ================= 5. MALWARE ================= -->
+  <section class="topic" id="malware">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 5</span><h2>Ameaças virtuais: Malware</h2></div>
+      <button class="done-btn" data-done="malware" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p><strong>Ameaças virtuais</strong> são fatores que colocam em risco a segurança da informação, ou seja, a <strong>integridade, confidencialidade e disponibilidade</strong> dos dados.</p>
+    <p><strong>Malware</strong> (<em>malicious software</em>) é qualquer software feito para <strong>danificar dispositivos, roubar dados ou causar danos</strong> a pessoas. Geralmente criado por grupos de hackers em busca de dinheiro (espalhando o malware ou leiloando na Dark Web), mas também usado como protesto, teste de segurança ou <strong>arma de guerra entre governos</strong>.</p>
+
+    <details class="acc" open>
+      <summary><span class="ico">🦠</span> Vírus <span class="sub">precisa de hospedeiro, se copia</span></summary>
+      <div class="acc-body"><p>Programa ou pedaço de código carregado no computador <strong>sem o seu conhecimento</strong>. Alguns são só irritantes, mas a maioria é destrutiva e feita para infectar e controlar sistemas vulneráveis. Espalha-se <strong>criando cópias de si mesmo</strong>, como um vírus biológico.</p></div>
+    </details>
+    <details class="acc">
+      <summary><span class="ico">🪱</span> Worm <span class="sub">se espalha sozinho pela rede</span></summary>
+      <div class="acc-body"><p>Infecta <strong>redes inteiras</strong> de dispositivos (locais ou pela internet) usando as interfaces de rede. Usa <strong>cada máquina infectada para infectar outras</strong>.</p></div>
+    </details>
+    <details class="acc">
+      <summary><span class="ico">🐴</span> Cavalo de Troia (Trojan) <span class="sub">se disfarça de programa legítimo</span></summary>
+      <div class="acc-body"><p>Finge ser um software legítimo ou se esconde em um software original que foi violado. Age discretamente e cria <strong>“portas dos fundos” (backdoors)</strong> para permitir a entrada de <strong>outros malwares</strong>.</p></div>
+    </details>
+    <details class="acc">
+      <summary><span class="ico">🕵️</span> Spyware <span class="sub">espiona e é difícil de detectar</span></summary>
+      <div class="acc-body">
+        <p>Coleta informações sobre seus hábitos online, histórico de navegação ou dados pessoais (como cartão de crédito) e envia a terceiros <strong>sem você saber</strong>.</p>
+        <ul>
+          <li><strong>Keylogger:</strong> monitora as <strong>teclas digitadas</strong>.</li>
+          <li><strong>Rootkit:</strong> esconde-se profundamente no sistema para manter acesso oculto.</li>
+          <li><strong>Web beacons:</strong> pequenos elementos invisíveis em páginas/e-mails que rastreiam o usuário.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="acc">
+      <summary><span class="ico">📢</span> Adware <span class="sub">propaganda agressiva</span></summary>
+      <div class="acc-body"><p>Não é maligno por natureza, mas softwares agressivos de publicidade podem minar a segurança só para exibir anúncios e servir de <strong>porta de entrada para outros malwares</strong>. (E pop-ups são irritantes!)</p></div>
+    </details>
+    <details class="acc">
+      <summary><span class="ico">🤖</span> Botnet <span class="sub">“exército de zumbis”</span></summary>
+      <div class="acc-body"><p><em>Bot network</em> (rede de robôs): muitos computadores infectados que obedecem aos comandos do hacker. Usada para <strong>enviar spam ou vírus, roubar dados e fazer ataques DDoS</strong>. Uma das maiores ameaças on-line atuais.</p></div>
+    </details>
+    <details class="acc">
+      <summary><span class="ico">🔐</span> Ransomware <span class="sub">“sequestro” de dados</span></summary>
+      <div class="acc-body">
+        <p><em>Ransom</em> (resgate) + malware. Instala-se no sistema e <strong>restringe o acesso a dados e programas</strong>, cobrando um <strong>resgate</strong> (geralmente em <strong>bitcoins</strong>) para devolver. O valor pode passar de <strong>US$ 1.000 por máquina</strong>. Exemplo famoso: <em>WannaCry</em> (2017).</p>
+        <p><strong>Como começa:</strong> e-mail com anexo ou link malicioso, ou pop-up dizendo que o PC está infectado e mandando clicar no link.</p>
+        <div class="grid-3">
+          <div class="card"><h3>Criptográfico</h3><p>Criptografa o HD inteiro e cobra pela chave.</p></div>
+          <div class="card"><h3>Lock-screen</h3><p>Trava a tela; às vezes finge ser um <strong>órgão do governo cobrando multa</strong>.</p></div>
+          <div class="card"><h3>Scareware</h3><p>Diz <strong>falsamente</strong> que o PC tem problemas e cobra para “resolver”. O PC continua funcionando, mas com alertas e programas bloqueados.</p></div>
+        </div>
+        <p style="margin-top:14px"><strong>Ataques de ransomware por ano:</strong></p>
+        <div class="stat-bars" aria-label="Gráfico: 269 mil em 2014, 362 mil em 2015, 463 mil em 2016">
+          <div class="col"><span class="val">269 mil</span><div class="fill" style="height:58%"></div><span class="lbl">2014</span></div>
+          <div class="col"><span class="val">362 mil</span><div class="fill" style="height:78%"></div><span class="lbl">2015</span></div>
+          <div class="col"><span class="val">463 mil</span><div class="fill" style="height:100%"></div><span class="lbl">2016</span></div>
+        </div>
+        <div class="callout warn">
+          <strong>Prevenção é tudo</strong>
+          Depois de bloqueado, é muito difícil remover (o usuário nem acessa o sistema). Mantenha o <strong>antivírus atualizado</strong> e com buscas regulares, ative o <strong>firewall</strong>, tenha <strong>backup atualizado</strong>, não clique em links de SPAM, desconfie até de links “de amigos”, não baixe torrents suspeitos.
+        </div>
+      </div>
+    </details>
+
+    <div class="callout">
+      <strong>🧯 Como se proteger de malware</strong>
+      <ul style="margin:6px 0 0">
+        <li><strong>Não confie em estranhos:</strong> a <em>engenharia social</em> (e-mails estranhos, alertas inesperados, perfis falsos) é a principal forma de entrega.</li>
+        <li><strong>Confira seus downloads:</strong> veja se o provedor é confiável e leia as avaliações.</li>
+        <li><strong>Use bloqueador de anúncios:</strong> banners e pop-ups podem infectar.</li>
+        <li><strong>Cuidado por onde navega:</strong> prefira sites grandes e de boa reputação.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 6. PHISHING ================= -->
+  <section class="topic" id="phishing">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 6</span><h2>Phishing e engenharia social</h2></div>
+      <button class="done-btn" data-done="phishing" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p><strong>Phishing</strong> (“pescaria”) é enganar a vítima para que ela <strong>revele dados pessoais</strong> (senhas, cartão, CPF, conta bancária) através de e-mails falsos ou sites falsos. Faz parte da <strong>engenharia social</strong>: a <strong>manipulação de emoções</strong> para obter acesso a dados sigilosos.</p>
+    <div class="callout warn">
+      <strong>Lembre-se</strong>
+      Bancos reais e órgãos governamentais <strong>nunca</strong> pedem que você confirme informações confidenciais.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tipo</th><th>Canal / como funciona</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Phishing clássico</strong></td><td>E-mails, mensageiros e páginas que imitam bancos e instituições.</td></tr>
+          <tr><td><strong>Smishing</strong></td><td>Phishing por <strong>SMS</strong>. Ex.: em 2018 criminosos usaram SMS para roubar caixas eletrônicos em operações sem cartão.</td></tr>
+          <tr><td><strong>Vishing</strong> (voice phishing)</td><td>Por <strong>telefone</strong>: golpista finge ser “seu banco”. Existe desde os anos 1990; hoje até <strong>bots/robôs</strong> ligam.</td></tr>
+          <tr><td><strong>Burlar OTP</strong></td><td>OTP (<em>One-Time Password</em>) é o código de uso único da autenticação em dois fatores, geralmente por SMS. Criminosos criaram truques de phishing para contorná-lo.</td></tr>
+          <tr><td><strong>Attachment-based</strong></td><td>Anexo falso (muitas vezes um <strong>.pdf</strong> que é só uma imagem com link) ou <strong>HTML</strong> disfarçado de formulário do banco que abre uma página de phishing.</td></tr>
+          <tr><td><strong>Pharming</strong></td><td>Malware altera o arquivo <strong>“hosts”</strong> do computador: você digita o endereço certo, mas é <strong>redirecionado</strong> ao site falso (correspondência errada entre IP e domínio).</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <strong>🤖 Aprendizado de máquina a serviço do crime</strong>
+      Chega um e-mail de um contato seu, com assunto que te interessa e um .pdf anexo. Ao clicar, abre uma “página do Google” pedindo login. O endereço parece confiável, mas é algo como <code>data:text/html,https://accounts.google.com</code>. Na verdade: a página é phishing, o .pdf é uma imagem com link e o remetente/assunto vieram de uma máquina hackeada de um contato.
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>📈 Números</h3>
+        <p>Casos de phishing <strong>saltaram 64,5%</strong> em dois meses no Brasil: <strong>5.297 casos</strong> únicos de 01/04 a 30/06 (relatório da Axur).</p>
+        <p class="muted">Setores mais afetados: <strong>e-commerce e financeiro</strong> (no 1º trimestre haviam sido SaaS e Webmail).</p>
+      </div>
+      <div class="card">
+        <h3>✅ Como se prevenir</h3>
+        <ul>
+          <li>Não responda links em e-mails não solicitados ou no Facebook.</li>
+          <li>Não abra anexos que você não pediu.</li>
+          <li>Proteja suas senhas e não as revele a ninguém.</li>
+          <li>Não forneça dados confidenciais por telefone, pessoalmente ou e-mail.</li>
+          <li><strong>Verifique a URL</strong>: erro de grafia ou domínio diferente (.com quando deveria ser .gov).</li>
+          <li>Mantenha o navegador atualizado.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. CRIMES ================= -->
+  <section class="topic" id="crimes">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 7</span><h2>Crimes virtuais mais comuns</h2></div>
+      <button class="done-btn" data-done="crimes" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <p>A internet trouxe facilidades (compras, pagamentos, comunicação), mas também novos problemas: fraudes bancárias, desvios de dinheiro, pornografia infantil e outros crimes. Isso obrigou governos a <strong>revisar leis e criar mecanismos de investigação e punição</strong>.</p>
+    <p class="muted">Outras ameaças listadas: deepfake, vírus, ameaças em dispositivos móveis, cyberbullying, vazamento de dados, phishing e engenharia social, golpes com dados pessoais, fake news, ataques financeiros, ataques a IoT, ransomware, clonagem de chips, ataques a perfis com senhas fracas, roubo de identidade, DDoS, worms, trojan, spyware.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Crime</th><th>Como acontece</th><th>O que fazer</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Furto de dados</strong></td><td>Páginas atrativas com “vantagens” no link. Dá acesso a contas e cartões; fotos podem ser usadas para <strong>extorsão</strong>.</td><td>Não clique em spam/promoções; não instale apps desconhecidos. Se vítima: <strong>ligue ao banco</strong> para bloquear, depois faça <strong>Boletim de Ocorrência</strong>.</td></tr>
+          <tr><td><strong>Compras fraudulentas</strong></td><td>Comprar e não receber, em <strong>lojas virtuais fantasmas</strong>.</td><td>Pesquise reclamações, confira se o telefone é real, <strong>guarde todos os comprovantes</strong>.</td></tr>
+          <tr><td><strong>Calúnia, difamação e injúria</strong></td><td>Crimes <strong>contra a honra</strong> nas redes: sujeitos a multa e até detenção, como na vida real.</td><td><strong>Salve provas (print)</strong>, registre <strong>BO</strong>; pode caber ação por <strong>danos morais</strong>.</td></tr>
+          <tr><td><strong>Pedofilia</strong></td><td>Compartilhamento de material de abuso de menores; aliciamento pelo anonimato. Também há divulgação não permitida de nudez de maiores de 18.</td><td><strong>Denunciar</strong> (BO ou delegacia especializada), tanto a página quanto quem divulgou.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:22px">📱 Golpes no WhatsApp</h3>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Promoção falsa (Faber-Castell)</h3>
+        <p>Falsa “amostra grátis” de material escolar na volta às aulas, pedindo para indicar 5 amigos. Objetivo: <strong>roubar dados pessoais</strong>. Mais de <strong>560 mil acessos</strong> ao link (dados da Kaspersky).</p>
+      </div>
+      <div class="card">
+        <h3>Número clonado</h3>
+        <p><strong>Clonagem de chip</strong>: o golpista liga para a operadora fingindo ter perdido o celular, ativa o número em outro chip, instala o WhatsApp e pede dinheiro aos contatos. <strong>Não quebra</strong> a segurança do WhatsApp, explora a verificação de identidade das operadoras.</p>
+      </div>
+    </div>
+    <div class="callout ok">
+      <strong>🛡️ Proteção</strong>
+      Ative a <strong>verificação em duas etapas</strong> (PIN de 6 dígitos): sem ele, o criminoso não entra mesmo com o chip clonado. Se um amigo pedir dinheiro, <strong>ligue para ele</strong> e confirme por voz.
+    </div>
+  </section>
+
+  <!-- ================= 8. FAKE NEWS & DEEPFAKE ================= -->
+  <section class="topic" id="fakenews">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 8</span><h2>Fake News e Deepfake</h2></div>
+      <button class="done-btn" data-done="fakenews" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>📰 Fake News</h3>
+        <p>Notícias falsas publicadas como se fossem reais, para <strong>legitimar um ponto de vista ou prejudicar</strong> uma pessoa ou grupo (geralmente figuras públicas).</p>
+        <ul>
+          <li>Grande <strong>poder viral</strong>: apelam ao <strong>emocional</strong>.</li>
+          <li>Mais persuasivas em populações com menor escolaridade que se informam por redes sociais, mas atingem todos (muitas vezes por viés político).</li>
+          <li>Em 2018 dominaram a corrida eleitoral.</li>
+          <li>As pessoas compartilham o que confirma suas convicções, sem checar.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔎 Como reconhecer</h3>
+        <ul>
+          <li>Manchete <strong>polêmica, curiosa</strong>.</li>
+          <li><strong>Não há fontes</strong> mencionadas.</li>
+          <li>Não foi publicada em <strong>outros veículos</strong>.</li>
+          <li>Use <strong>sites/agências de checagem</strong>.</li>
+        </ul>
+        <p class="muted">Cuidado também com falsas ofertas no WhatsApp em datas especiais (Carnaval, Black Friday, Dia dos Namorados...).</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>⚖️ Enquadramento legal</strong>
+      Fake news podem ser <strong>calúnia, difamação ou injúria</strong> (crimes contra a honra), e também ameaça, racismo, preconceito, homofobia, misoginia, assédio... Muitas vezes não se encaixam em um crime definido. Há projeto de lei para alterar o <strong>Marco Civil da Internet (Lei 12.965/2014)</strong> responsabilizando provedores por perfis falsos e fake news.
+    </div>
+
+    <h3>🧭 Fato ou boato? Faça o teste antes de compartilhar</h3>
+    <div class="card" id="fakeTree" aria-live="polite"></div>
+
+    <h3 style="margin-top:26px">🎭 Deepfake</h3>
+    <div class="grid-2">
+      <div class="card">
+        <p><strong>Inteligência artificial</strong> usada para fazer montagens <strong>substituindo rostos e vozes</strong> em vídeos realistas (famosos e políticos). Consegue enganar humanos e até sistemas de defesa.</p>
+        <p>O termo surgiu em <strong>dezembro de 2017</strong>, com um usuário do <strong>Reddit</strong> chamado “deepfake” que usava <strong>deep learning</strong> para colocar rostos de famosas em vídeos.</p>
+      </div>
+      <div class="card">
+        <p><strong>Deep Learning</strong> é um tipo de <strong>Machine Learning</strong>: em vez de seguir equações predefinidas, o computador <strong>aprende sozinho</strong> reconhecendo padrões em <strong>várias camadas de processamento</strong> (fala, imagem, previsões).</p>
+        <p><strong>Proteção:</strong> evite compartilhar vídeos pessoais com desconhecidos ou publicamente. Se for vítima, <strong>reúna as informações</strong> e procure um <strong>advogado ou a Defensoria Pública</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. CYBERBULLYING ================= -->
+  <section class="topic" id="cyberbullying">
+    <div class="topic-head">
+      <div><span class="tag">Módulo 9</span><h2>Bullying e Cyberbullying</h2></div>
+      <button class="done-btn" data-done="cyberbullying" aria-pressed="false">Marcar como estudado</button>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Bullying</h3>
+        <p>Não tem conceito único; envolve <strong>dano moral</strong> e ações como denegrir, violentar, agredir e destruir a estrutura psíquica de alguém, <strong>sem motivação e de forma repetida</strong>.</p>
+        <ul>
+          <li><strong>ABRAPIA</strong>: colocar apelidos, humilhar, fazer sofrer, excluir, amedrontar.</li>
+          <li><strong>Dan Olweus</strong>: as agressões são <strong>repetitivas</strong>.</li>
+          <li><strong>Barbosa Silva</strong>: comportamento agressivo, cruel, proposital e <strong>sistemático</strong>.</li>
+          <li><strong>Gabriel</strong>: 3 formas básicas: <strong>emocional, verbal e física</strong>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cyberbullying</h3>
+        <p>Bullying por <strong>mídias digitais</strong>: constranger, amedrontar, ridicularizar e humilhar alguém (conhecido ou não) por posts, sites, blogs, e-mail, SMS.</p>
+        <ul>
+          <li>Mensagens cruéis ou ameaças por e-mail/celular.</li>
+          <li>Espalhar rumores cruéis on-line.</li>
+          <li>Divulgar fotos íntimas ou dados privados.</li>
+          <li>Invadir a conta de alguém e postar se passando por ela.</li>
+          <li>Simular a identidade de outra pessoa para prejudicar alguém.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <strong>Por que pode ser pior que o bullying?</strong>
+      Mesmo sem agressão física, o conteúdo <strong>fica disponível por muito tempo</strong> na rede e se espalha: a violência se torna <strong>atemporal</strong>, com graves danos psicológicos à vítima.
+    </div>
+  </section>
+
+  <!-- ================= SIMULADO ================= -->
+  <section class="topic" id="simulado">
+    <div class="topic-head">
+      <div><span class="tag">Hora de treinar</span><h2>📝 Simulado: 30 questões</h2></div>
+    </div>
+    <p>Questões de todo o conteúdo, em ordem aleatória. Cada resposta mostra na hora se está certa e o porquê. No final você vê a nota e o desempenho por assunto.</p>
+    <div class="card" id="quiz" aria-live="polite"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    Resumo feito a partir dos materiais de aula de Segurança da Informação (Prof. Junio Santos). Material de estudo entre colegas; em caso de dúvida, confira os slides originais.
+  </div>
+</footer>
+
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/pillars.js"></script>
+<script src="assets/js/fake-tree.js"></script>
+<script src="assets/js/quiz-data.js"></script>
+<script src="assets/js/quiz.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
